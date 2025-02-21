@@ -21,6 +21,6 @@
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Row="0"/>
 
         <!-- StatusBar -->
-        <views:StatusBarView Grid.Row="1" DataContext="{Binding StatusBarVM}"/>
+        <views:StatusBarView Grid.Row="1" DataContext="{x:Static local:StatusBarViewModel.Instance}" />
     </Grid>
 </Window>

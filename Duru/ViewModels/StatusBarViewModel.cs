@@ -7,23 +7,22 @@ namespace Duru.ViewModels
     public partial class StatusBarViewModel : ObservableObject
     {
 
-        /* TODO: StatusBar güncellenmiyor. Bunun için ne yapacağım hakkında bir fikrim yok. */
+        // Singleton Instance (Tüm uygulama boyunca tek bir nesne)
+        private static StatusBarViewModel? _instance;
+        public static StatusBarViewModel Instance => _instance ??= new StatusBarViewModel();
+
         [ObservableProperty]
         private string statusText = "Varsayılan mesaj";
 
         [ObservableProperty]
         private Visibility statusButtonVisibility = Visibility.Collapsed;
 
-        public StatusBarViewModel()
-        {
-            StatusButtonVisibility = Visibility.Collapsed;
-        }
-
+        private StatusBarViewModel() { }
 
         [RelayCommand]
         private void StatusButtonClicked()
         {
-            StatusText = "Button''a tıklandı.";
+            StatusText = "Button'a tıklandı!";
         }
     }
 }

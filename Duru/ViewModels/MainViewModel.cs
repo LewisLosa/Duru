@@ -8,7 +8,7 @@ namespace Duru.ViewModels
 {
     public partial class MainViewModel : ObservableObject
     {
-        public StatusBarViewModel StatusBarVM { get; } = new StatusBarViewModel();
+        public StatusBarViewModel StatusBarVM => StatusBarViewModel.Instance;
         [RelayCommand]
         private void NavigateReservations()
         {

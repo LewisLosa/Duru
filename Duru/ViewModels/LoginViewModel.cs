@@ -25,7 +25,6 @@ namespace Duru.ViewModels
             // TODO: Buraya giriş kontrolü eklenebilir.
             if (!string.IsNullOrEmpty(Username) && SecurePassword != null)
             {
-                // Ana pencereyi bul ve yönlendir
                 MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
                 mainWindow.MainFrame.NavigationService.Navigate(new MainView());
             }
