@@ -13,14 +13,11 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="95*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <!-- Sayfa İçeriği -->
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Row="0"/>
-
-        <!-- StatusBar -->
         <views:StatusBarView Grid.Row="1" DataContext="{x:Static local:StatusBarViewModel.Instance}" />
     </Grid>
 </Window>
