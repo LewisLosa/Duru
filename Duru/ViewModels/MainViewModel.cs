@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Windows;
 using Duru.Views;
@@ -14,8 +13,7 @@ namespace Duru.ViewModels
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.MainFrame.NavigationService.Navigate(new ReservationsView());
-            StatusBarVM.StatusText = "Sayfa 1: Sadece yazı var";
-            StatusBarVM.StatusButtonVisibility = System.Windows.Visibility.Collapsed;
+            StatusBarVM.StatusText = "🔁 Rezervasyonlar yüklendi. (128ms)";
         }
 
         [RelayCommand]
@@ -23,8 +21,7 @@ namespace Duru.ViewModels
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.MainFrame.NavigationService.Navigate(new LoginView());
-            StatusBarVM.StatusText = "Sayfa 2: Yazı ve buton var";
-            StatusBarVM.StatusButtonVisibility = System.Windows.Visibility.Visible;
+            StatusBarVM.StatusText = "👤 Hesaptan çıkış yapıldı.";
         }
 
     }

@@ -8,12 +8,7 @@ namespace Duru.ViewModels
 {
     public partial class LoginViewModel : ObservableObject
     {
-
-        [ObservableProperty]
-        private bool isSignInVisible = true;
-
-        public Visibility SignInVisibility => IsSignInVisible ? Visibility.Visible : Visibility.Hidden;
-        public Visibility SignUpVisibility => IsSignInVisible ? Visibility.Hidden : Visibility.Visible;
+        public StatusBarViewModel StatusBarVM => StatusBarViewModel.Instance;
 
         [ObservableProperty]
         private string username;
@@ -27,25 +22,13 @@ namespace Duru.ViewModels
             {
                 MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
                 mainWindow.MainFrame.NavigationService.Navigate(new MainView());
+                StatusBarVM.StatusText = "✅ Başarıyla giriş yaptınız.";
+
             }
             else
             {
-                MessageBox.Show("Kullanıcı adı ve şifre boş olamaz!");
+                StatusBarVM.StatusText = "❌ Kullanıcı adı ve şifre boş olamaz.";
             }
-        }
-
-        private void Register()
-        {
-            // TODO: Buraya kayıt kontrolü eklenebilir.
-
-        }
-
-        [RelayCommand]
-        private void TogglePanel()
-        {
-            IsSignInVisible = !IsSignInVisible;
-            OnPropertyChanged(nameof(SignInVisibility));
-            OnPropertyChanged(nameof(SignUpVisibility));
         }
     }
 }

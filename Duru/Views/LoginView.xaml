@@ -12,16 +12,10 @@
         <local:LoginViewModel/>
     </Page.DataContext>
 
-    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="400">
-        <StackPanel x:Name="signInPanel" HorizontalAlignment="Center" Visibility="{Binding SignInVisibility}" Width="250" Height="350">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="220">
+        <StackPanel x:Name="signInPanel" HorizontalAlignment="Center" Visibility="Visible" Width="250" Height="350">
             <DockPanel>
                 <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Text="Sign In"/>
-                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="16" FontWeight="Light">
-            don't have account?
-                    <Hyperlink Command="{Binding TogglePanelCommand}">
-                        sign up.
-                    </Hyperlink>
-                </TextBlock>
             </DockPanel>
             <StackPanel>
                 <StackPanel>
@@ -31,46 +25,6 @@
                         <TextBlock Margin="10 0 10 10" Text="Password:"/>
                         <PasswordBox x:Name="pwTxtBox" PasswordChanged="pwTxtBox_PasswordChanged" VerticalContentAlignment="Center" FontSize="14" Margin="10 -10 10 10" Height="30"/>
                         <Button Content="Sign In" Background="#0984e3" Foreground="#dfe6e9" FontSize="14" Margin="10" Height="30" Command="{Binding LoginCommand}"/>
-                    </StackPanel>
-                </StackPanel>
-            </StackPanel>
-        </StackPanel>
-        <StackPanel x:Name="signUpPanel" HorizontalAlignment="Center" Visibility="{Binding SignUpVisibility}" Width="250" Height="350">
-            <DockPanel>
-                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Text="Sign Up"/>
-                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="16" FontWeight="Light">
-                    already registered?
-                    <Hyperlink Command="{Binding TogglePanelCommand}">
-                        sign in.
-                    </Hyperlink>
-                </TextBlock>
-            </DockPanel>
-            <StackPanel>
-                <StackPanel>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50*"/>
-                            <ColumnDefinition Width="50*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Margin="10" Text="First Name:"/>
-                        <TextBlock Grid.Column="2" Margin="0 10 10 10" Text="Last Name:"/>
-                    </Grid>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50*"/>
-                            <ColumnDefinition Width="50*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBox VerticalContentAlignment="Center" FontSize="14" Margin="10 -10 10 0" Height="30"/>
-                        <TextBox VerticalContentAlignment="Center" FontSize="14" Grid.Column="2" Margin="0 -10 10 0" Height="30"/>
-                    </Grid>
-                    <StackPanel>
-                        <TextBlock Margin="10" Text="Username:"/>
-                        <TextBox VerticalContentAlignment="Center" FontSize="14" Margin="10 -10 10 10" Height="30"/>
-                        <TextBlock Margin="10 0 10 10" Text="E-Mail:"/>
-                        <TextBox VerticalContentAlignment="Center" FontSize="14" Margin="10 -10 10 10" Height="30"/>
-                        <TextBlock Margin="10 0 10 10" Text="Password:"/>
-                        <PasswordBox VerticalContentAlignment="Center" FontSize="14" Margin="10 -10 10 10" Height="30"/>
-                        <Button Content="Sign Up" Background="#0984e3" Foreground="#dfe6e9" FontSize="14" Margin="10" Height="30"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
