@@ -12,17 +12,12 @@ namespace Duru.ViewModels
         public static StatusBarViewModel Instance => _instance ??= new StatusBarViewModel();
 
         [ObservableProperty]
-        private string statusText = "Varsayılan mesaj";
+        private string statusText = "✅ Program başlatıldı.";
 
-        [ObservableProperty]
-        private Visibility statusButtonVisibility = Visibility.Collapsed;
-
-        private StatusBarViewModel() { }
-
-        [RelayCommand]
-        private void StatusButtonClicked()
+        public StatusBarViewModel()
         {
-            StatusText = "Button'a tıklandı!";
+
         }
+
     }
 }
