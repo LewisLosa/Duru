@@ -13,24 +13,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Duru.Views
-{
-    /// <summary>
-    /// Interaction logic for LoginView.xaml
-    /// </summary>
-    public partial class LoginView : Page
-    {
-        public LoginView()
-        {
-            InitializeComponent();
-        }
+namespace Duru.Views;
 
-        private void pwTxtBox_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            if (this.DataContext != null)
-            {
-                ((dynamic)this.DataContext).SecurePassword = ((PasswordBox)sender).SecurePassword;
-            }
-        }
+/// <summary>
+/// Interaction logic for LoginView.xaml
+/// </summary>
+public partial class LoginView : Page
+{
+    public LoginView()
+    {
+        InitializeComponent();
+    }
+
+    private void pwTxtBox_PasswordChanged(object sender, RoutedEventArgs e)
+    {
+        if (DataContext != null) ((dynamic)DataContext).SecurePassword = ((PasswordBox)sender).SecurePassword;
     }
 }

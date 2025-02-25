@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Duru.ViewModels
+namespace Duru.ViewModels;
+
+internal class ReservationsViewModel
 {
-    class ReservationsViewModel
-    {
-    }
 }

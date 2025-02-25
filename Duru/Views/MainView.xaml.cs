@@ -13,16 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Duru.Views
+namespace Duru.Views;
+
+/// <summary>
+/// Interaction logic for MainView.xaml
+/// </summary>
+public partial class MainView : Page
 {
-    /// <summary>
-    /// Interaction logic for MainView.xaml
-    /// </summary>
-    public partial class MainView : Page
+    public MainView()
     {
-        public MainView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

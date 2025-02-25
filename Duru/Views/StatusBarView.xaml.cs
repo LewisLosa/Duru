@@ -13,16 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Duru.Views
+namespace Duru.Views;
+
+/// <summary>
+/// Interaction logic for StatusBarView.xaml
+/// </summary>
+public partial class StatusBarView : UserControl
 {
-    /// <summary>
-    /// Interaction logic for StatusBarView.xaml
-    /// </summary>
-    public partial class StatusBarView : UserControl
+    public StatusBarView()
     {
-        public StatusBarView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

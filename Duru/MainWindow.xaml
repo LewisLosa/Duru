@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="900">
     <Window.DataContext>
-        <local:MainViewModel/>
+        <local:MainViewModel />
     </Window.DataContext>
 
     <Grid>
@@ -17,7 +17,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Row="0"/>
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Row="0" />
         <views:StatusBarView Grid.Row="1" DataContext="{x:Static local:StatusBarViewModel.Instance}" />
     </Grid>
 </Window>

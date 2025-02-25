@@ -13,16 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Duru.Views
+namespace Duru.Views;
+
+/// <summary>
+/// Interaction logic for SetupView.xaml
+/// </summary>
+public partial class SetupView : Page
 {
-    /// <summary>
-    /// Interaction logic for SetupView.xaml
-    /// </summary>
-    public partial class SetupView : Page
+    public SetupView()
     {
-        public SetupView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

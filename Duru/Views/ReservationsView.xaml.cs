@@ -13,16 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Duru.Views
+namespace Duru.Views;
+
+/// <summary>
+/// Interaction logic for ReservationsView.xaml
+/// </summary>
+public partial class ReservationsView : Page
 {
-    /// <summary>
-    /// Interaction logic for ReservationsView.xaml
-    /// </summary>
-    public partial class ReservationsView : Page
+    public ReservationsView()
     {
-        public ReservationsView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }
