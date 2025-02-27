@@ -1,6 +1,6 @@
 ﻿namespace Duru.Core.Models;
 
-public class Feedback
+public class Feedback 
 {
     public int FeedbackId { get; set; }
     public int ReservationId { get; set; }

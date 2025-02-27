@@ -1,6 +1,6 @@
 ﻿namespace Duru.Core.Models;
 
-public class Payments
+public class Payment
 {
     public int PaymentId { get; set; }
     public int ReservationId { get; set; }

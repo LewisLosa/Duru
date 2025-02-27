@@ -1,6 +1,6 @@
 ﻿namespace Duru.Core.Models;
 
-public class Rooms
+public class Room
 {
     public int RoomId { get; set; }
     public string RoomNumber { get; set; } = string.Empty;
