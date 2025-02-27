@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using Duru.Data.Entities;
+using Duru.Data.Repositories;
 
 namespace Duru.Data;
 
@@ -24,10 +25,17 @@ public static class DatabaseInitializer
                 else
                     connection.Open();
 
-                var entityTypes = Assembly.GetAssembly(typeof(IEntity))
+                var assembly = Assembly.GetAssembly(typeof(IEntity));
+                if (assembly == null)
+                {
+                    throw new InvalidOperationException("Unable to get the assembly containing IEntity.");
+                }
+
+                var entityTypes = assembly
                     .GetTypes()
                     .Where(t => typeof(IEntity).IsAssignableFrom(t) && t.IsClass && !t.IsAbstract)
                     .ToList();
+
 
                 foreach (var type in entityTypes)
                 {
