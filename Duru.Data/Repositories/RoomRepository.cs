@@ -18,14 +18,14 @@ public class RoomRepository : BaseRepository<Room>, IRoomRepository
     {
         using var connection = _dbContext.CreateConnection();
         var sql =
-            "INSERT INTO Rooms (RoomNumber, IsOccupied) VALUES (@RoomNumber, @IsOccupied); SELECT last_insert_rowid();";
+            "INSERT INTO Rooms (RoomNumber, Status, Floor) VALUES (@RoomNumber, @Status, @Floor); SELECT last_insert_rowid();";
         return await connection.ExecuteScalarAsync<int>(sql, entity);
     }
 
     public override async Task<int> UpdateAsync(Room entity)
     {
         using var connection = _dbContext.CreateConnection();
-        var sql = "UPDATE Rooms SET RoomNumber = @RoomNumber, IsOccupied = @IsOccupied WHERE Id = @Id";
+        var sql = "UPDATE Rooms SET RoomNumber = @RoomNumber, Status = @Status, Floor = @Floor WHERE Id = @Id";
         return await connection.ExecuteAsync(sql, entity);
     }
 }
