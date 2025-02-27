@@ -1,12 +1,14 @@
 ﻿namespace Duru.Core.Models;
 
-public class Guests
+public class Employee
 {
-    public int GuestId { get; set; }
+    public int EmployeeId { get; set; }
     public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
+    public string? Position { get; set; }
     public string? Email { get; set; }
     public string? Phone { get; set; }
-    public string? Address { get; set; }
+    public DateTime? HireDate { get; set; }
+    public string Status { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; }
 }

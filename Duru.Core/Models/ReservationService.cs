@@ -1,6 +1,6 @@
 ﻿namespace Duru.Core.Models;
 
-public class ReservationServices
+public class ReservationService
 {
     public int ReservationServiceId { get; set; }
     public int ReservationId { get; set; }
