@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duru.Core", "Duru.Core\Duru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duru.Tests", "Duru.Tests\Duru.Tests.csproj", "{5C3D4430-DD10-46CD-984C-EF957A61CE7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duru.WPF", "Duru.WPF\Duru.WPF.csproj", "{6B37D772-C455-490A-9886-EA72C9718E9D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{5C3D4430-DD10-46CD-984C-EF957A61CE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C3D4430-DD10-46CD-984C-EF957A61CE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C3D4430-DD10-46CD-984C-EF957A61CE7E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B37D772-C455-490A-9886-EA72C9718E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B37D772-C455-490A-9886-EA72C9718E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B37D772-C455-490A-9886-EA72C9718E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B37D772-C455-490A-9886-EA72C9718E9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
