@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Duru.WPF.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Title="Dashboard">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Dashboard" FontSize="24" FontWeight="Bold"/>
+            <TextBlock Text="Occupancy Stats" FontSize="18"/>
+            <ItemsControl ItemsSource="{Binding Stats.RecentReservations}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding ReservationDetails}"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <ProgressBar IsIndeterminate="True" Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+        </StackPanel>
+    </Grid>
+    </UserControl>
